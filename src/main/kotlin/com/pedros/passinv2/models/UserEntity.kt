@@ -32,7 +32,7 @@ class UserEntity() : UserDetails {
         get() = "${this.name} ${this.lastname}".trim()
 
     @Enumerated(EnumType.ORDINAL)
-    private var role: UserRole ?= UserRole.USER;
+    private var role: UserRole ?= UserRole.USER
 
     constructor(name: String, lastname: String, email: String, password: String, username: String, role: UserRole) : this() {
         this.name = name
