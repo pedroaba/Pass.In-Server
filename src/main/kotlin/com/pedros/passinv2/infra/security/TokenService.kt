@@ -26,7 +26,7 @@ class TokenService {
             val token = JWT.create()
                 .withIssuer(issuer)
                 .withSubject(user.username)
-                .withExpiresAt(Date.from(Instant.now().plusSeconds(60 * 60 * 24)))
+                .withExpiresAt(generateExpirationToken())
                 .sign(algorithm)
 
             return token
