@@ -19,7 +19,7 @@ import java.util.UUID
 class UserEntity() : UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private var id: UUID ?= null;
+    private var id: UUID ?= null
 
     private var name: String ?= null
     private var lastname: String ?= null
@@ -35,12 +35,12 @@ class UserEntity() : UserDetails {
     private var role: UserRole ?= UserRole.USER;
 
     constructor(name: String, lastname: String, email: String, password: String, username: String, role: UserRole) : this() {
-        this.name = name;
-        this.lastname = lastname;
-        this.email = email;
-        this.password = password;
-        this.username = username;
-        this.role = role;
+        this.name = name
+        this.lastname = lastname
+        this.email = email
+        this.password = password
+        this.username = username
+        this.role = role
     }
 
     fun getEmail(): String {
